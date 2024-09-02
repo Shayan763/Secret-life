@@ -9,7 +9,7 @@ const signUp = async (req, res) =>{
 
     try {
         // Check if user already exists
-        const existingUser = users.find(user => user.email === email || user.username === username || user.phone === phone);
+        const existingUser = users.find(user => user.email === email || user.username === username || user.phone === phone || user.fullname === fullname);
         if (existingUser) {
             return res.status(400).json({ message: 'User already exists' });
         }
@@ -55,7 +55,7 @@ const logout = (req, res) => {
 };
 
 module.exports = {
-    signup,
+    signUp,
     login,
     logout
 };
