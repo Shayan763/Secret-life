@@ -4,14 +4,14 @@ const router = express.Router();
 
 
 
-// Get All Users
+// Get All Cancelled Users
 router.get('/', cancelledUserscontroller.getAllcancelledUser);
 
-// Get Users by ID
+// Get Cancellled Users by ID
 router.get('/:id', cancelledUserscontroller.getcancelledUserById);
 
 
-// Delete Users
+// Delete Cancelled Users
 router.delete('/:id', cancelledUserscontroller.deletedcancelledUser);
 
 module.exports = router;
